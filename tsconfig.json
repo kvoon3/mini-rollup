@@ -5,6 +5,9 @@
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "paths": {
+      "~/": ["src/"]
+    },
     "resolveJsonModule": true,
     "checkJs": true,
     "strict": true,
@@ -15,5 +18,5 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist", "playground"]
 }

@@ -12,3 +12,14 @@
 
 1. acorn: 生成解析 Ast
 2. magic-string: 操控源代码, 裁剪源代码
+
+## Stage 2 - Tree Shaking
+
+Step1:
+
+1. 在 Module 中，找到 imports, exports, definitions
+2. 在 statement 中， 找到 _dependOn, _defines
+
+Step2:
+
+重构 expandAllStatements

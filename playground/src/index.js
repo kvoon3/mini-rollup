@@ -1,6 +1,11 @@
-function add(a, b) {
-  return a + b
-}
-function run() {
-  console.log(add(1, 1))
+const bar = 'bar'
+
+function one() {
+  const foo = 'foo'
+  function two() {
+    const foo = 'foo'
+    function three() {
+      const baz = 'baz'
+    }
+  }
 }

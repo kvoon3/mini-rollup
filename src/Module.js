@@ -34,7 +34,17 @@ export default class Module {
       ecmaVersion: 8,
       sourceType: 'module',
     })
+
+    this.imports = {}
+    this.exports = {}
+
+    // top level var definitions --to--> its statement
+    /** @type {Record<string, import('./ast/analyse').ProgramBody[number]>} */
+    this.definitions = {}
+
     analyse(this.ast, this.code, this)
+
+    console.log('this.definitions', this.definitions)
   }
 
   expandAllStatement() {

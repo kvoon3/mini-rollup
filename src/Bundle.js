@@ -38,7 +38,7 @@ export default class Bundle {
    */
   generate(statements) {
     const bundle = new MagicStringBundle({
-      separator: '\n',
+      separator: '\n\n',
     })
 
     statements.forEach((statement) => {
